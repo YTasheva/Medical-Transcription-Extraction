@@ -88,3 +88,26 @@ def extract_patient_data(transcription, medical_specialty):
     return patient_data
 
 
+def match_icd_code(recommended_treatment):
+    """Match a treatment to its ICD-10 code."""
+    messages = [
+        {
+            "role": "system",
+            "content": "You are a medical coding assistant. Match treatments and procedures with their correct ICD-10 codes."
+        },
+        {
+            "role": "user",
+            "content": f"Provide the ICD-10 code and description for this treatment or procedure: {recommended_treatment}"
+        }
+    ]
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages,
+        tools=[function_definition[1]],
+        tool_choice={"type": "function", "function": {"name": "match_icd_code"}}
+    )
+
+    return json.loads(response.choices[0].message.tool_calls[0].function.arguments)
+
+
