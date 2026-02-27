@@ -111,3 +111,38 @@ def match_icd_code(recommended_treatment):
     return json.loads(response.choices[0].message.tool_calls[0].function.arguments)
 
 
+# Process all rows
+results = []
+
+for i, row in df.iterrows():
+    print(f"Processing row {i+1}/{len(df)}...")
+    try:
+        patient_data = extract_patient_data(row["transcription"], row["medical_specialty"])
+        icd_data = match_icd_code(patient_data["recommended_treatment"])
+
+        combined = {
+            "age": patient_data.get("age"),
+            "medical_specialty": patient_data.get("medical_specialty"),
+            "recommended_treatment": patient_data.get("recommended_treatment"),
+            "icd_code": icd_data.get("icd_code"),
+            "icd_description": icd_data.get("icd_description")
+        }
+        results.append(combined)
+
+    except Exception as e:
+        print(f"Error processing row {i}: {e}")
+        results.append({
+            "age": None,
+            "medical_specialty": row["medical_specialty"],
+            "recommended_treatment": None,
+            "icd_code": None,
+            "icd_description": None
+        })
+
+# Save results to DataFrame and CSV
+df_structured = pd.DataFrame(results)
+print("\nStructured output:")
+print(df_structured.head())
+
+df_structured.to_csv("data/structured_output.csv", index=False)
+print("\nSaved to data/structured_output.csv")
