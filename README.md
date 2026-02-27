@@ -112,6 +112,15 @@ The final output is a pandas DataFrame `df_structured` with the following column
 - Error handling is included: rows that fail API calls are saved with `None` values rather than crashing the pipeline
 - Uses `gpt-4o-mini` for cost-efficient extraction
 
-## License
+## Licence
 
-MIT
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Author
+
+- GitHub - [Yuliya Tasheva](https://github.com/YTasheva)
+
+> [YTasheva.com](#) &nbsp;&middot;&nbsp;
+> LinkedIn [@YTasheva](https://www.linkedin.com/in/yuliya-stella-tasheva/) &nbsp;&middot;&nbsp;
+> Email [info@yuliya-tasheva.co.uk](#) &nbsp;&middot;&nbsp;
+
