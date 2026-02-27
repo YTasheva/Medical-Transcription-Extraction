@@ -120,7 +120,7 @@ The final output is a pandas DataFrame `df_structured` with the following column
 
 - GitHub - [Yuliya Tasheva](https://github.com/YTasheva)
 
-> [https://yuliya-tasheva.co.uk/](#) &nbsp;&middot;&nbsp;
-> LinkedIn [@YTasheva](https://www.linkedin.com/in/yuliya-stella-tasheva/) &nbsp;&middot;&nbsp;
-> Email [info@yuliya-tasheva.co.uk](#) &nbsp;&middot;&nbsp;
+> [Website](https://yuliya-tasheva.co.uk/) &nbsp;&middot;&nbsp;
+>  [LinkedIn](https://www.linkedin.com/in/yuliya-stella-tasheva/) &nbsp;&middot;&nbsp;
+> [Email](info@yuliya-tasheva.co.uk) &nbsp;&middot;&nbsp;
 
