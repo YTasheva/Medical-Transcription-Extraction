@@ -59,3 +59,32 @@ function_definition = [
 ]
 
 
+def extract_patient_data(transcription, medical_specialty):
+    """Extract age and recommended treatment from a transcription."""
+    messages = [
+        {
+            "role": "system",
+            "content": (
+                "You are a medical data extraction assistant. "
+                "Extract structured information from medical transcriptions accurately. "
+                "Do not make assumptions about values not present in the text."
+            )
+        },
+        {
+            "role": "user",
+            "content": f"Extract the patient age and recommended treatment or procedure from this transcription:\n\n{transcription}"
+        }
+    ]
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=messages,
+        tools=[function_definition[0]],
+        tool_choice={"type": "function", "function": {"name": "extract_patient_data"}}
+    )
+
+    patient_data = json.loads(response.choices[0].message.tool_calls[0].function.arguments)
+    patient_data["medical_specialty"] = medical_specialty
+    return patient_data
+
+
