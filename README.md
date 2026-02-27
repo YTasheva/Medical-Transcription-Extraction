@@ -1,4 +1,4 @@
-# Medical Transcription ICD-10 Code Extractor
+# Medical Transcription Extraction
 
 A Python project that uses the OpenAI API with function calling to automatically extract structured medical data from clinical transcriptions and match them to ICD-10 codes for insurance and billing purposes.
 
@@ -19,7 +19,7 @@ medical-transcription-icd/
 ├── main.py
 ├── data/
 │   └── transcriptions.csv
-└── .env.example
+└── .env
 ```
 
 ## Setup
