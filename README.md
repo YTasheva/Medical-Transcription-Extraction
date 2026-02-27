@@ -1,4 +1,4 @@
-# Medical Transcription Extraction
+<h1 align="center">Medical Transcription Extraction</h1>
 
 A Python project that uses the OpenAI API with function calling to automatically extract structured medical data from clinical transcriptions and match them to ICD-10 codes for insurance and billing purposes.
 
@@ -13,7 +13,7 @@ Medical professionals write dense, natural-language transcriptions that are diff
 ## Project Structure
 
 ```
-medical-transcription-icd/
+medical-transcription-extraction/
 ├── README.md
 ├── requirements.txt
 ├── main.py
@@ -120,7 +120,7 @@ The final output is a pandas DataFrame `df_structured` with the following column
 
 - GitHub - [Yuliya Tasheva](https://github.com/YTasheva)
 
-> [yuliya-tasheva.co.uk/](#) &nbsp;&middot;&nbsp;
+> [https://yuliya-tasheva.co.uk/](#) &nbsp;&middot;&nbsp;
 > LinkedIn [@YTasheva](https://www.linkedin.com/in/yuliya-stella-tasheva/) &nbsp;&middot;&nbsp;
 > Email [info@yuliya-tasheva.co.uk](#) &nbsp;&middot;&nbsp;
 
