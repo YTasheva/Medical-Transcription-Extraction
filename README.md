@@ -13,7 +13,7 @@ Medical professionals write dense, natural-language transcriptions that are diff
 ## Project Structure
 
 ```
-medical-transcription-extraction/
+Medical-Transcription-Extraction/
 ├── README.md
 ├── requirements.txt
 ├── main.py
@@ -27,8 +27,8 @@ medical-transcription-extraction/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/medical-transcription-icd.git
-cd medical-transcription-icd
+git clone https://github.com/YTasheva/Medical-Transcription-Extraction.git
+cd Medical-Transcription-Extraction
 ```
 
 ### 2. Install dependencies
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 Then edit `.env`:
 
 ```
-OPENAI_API_KEY=your_api_key_here
+OPENAI_API_KEY=api_key_here
 ```
 
 ### 4. Add your data
